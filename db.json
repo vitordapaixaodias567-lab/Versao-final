@@ -1,0 +1,118 @@
+{
+  "pessoas": [
+    {
+      "nome": "Vitor da Paixão Dias",
+      "idade": "21",
+      "email": "vitordapaixaodias567@gmail.com",
+      "senha": "#Minicraft12",
+      "id": "iaKlh_q8V7w",
+      "cpf": "90789923345",
+      "telefone": "44 567782133"
+    },
+    {
+      "nome": "Marcelo Ferrari",
+      "idade": "21",
+      "email": "marcelo123@gmail.com",
+      "senha": "#Minicraft12",
+      "id": "tJyDrNQFCMU",
+      "cpf": "12993034456",
+      "telefone": "44 999357889",
+      "cidade": "Cianorte",
+      "cep": "87214-000",
+      "rua": "Cianorte",
+      "numeroresidencia": "97",
+      "bairro": "Vidigal"
+    },
+    {
+      "nome": "Fabio Henrique",
+      "idade": "34",
+      "email": "fabio345@gmail.com",
+      "senha": "#Minicraft123",
+      "id": "nX3HVz4RwGE",
+      "cpf": "907.899.233-45",
+      "telefone": "(55) 88923-8212"
+    }
+  ],
+  "agendamentos": [
+    {
+      "usuarioId": "iaKlh_q8V7w",
+      "cpf": "12993034456",
+      "cnpj": "",
+      "telefone": "44999243799",
+      "cidade": "Cianorte",
+      "cep": "87214-000",
+      "rua": "Cianorte",
+      "numeroresidencia": "97",
+      "bairro": "Vidigal",
+      "complemento": "",
+      "tipo": "residencial",
+      "reservatorio": false,
+      "data": "2026-11-30",
+      "quantidade": "6",
+      "observacao": "",
+      "id": "oH0lLwCzPyc"
+    },
+    {
+      "usuarioId": "tJyDrNQFCMU",
+      "cpf": "12993034456",
+      "telefone": "44 999357889",
+      "cidade": "Cianorte",
+      "cep": "87214-000",
+      "rua": "Cianorte",
+      "numeroresidencia": "97",
+      "bairro": "Vidigal",
+      "complemento": "",
+      "quantidade": "78",
+      "observacao": "",
+      "status": "pendente",
+      "criadoEm": "2026-11-10T00:29:41.494Z",
+      "id": "NElBIrtSwx8"
+    },
+    {
+      "usuarioId": "w7CX_ekScY4",
+      "cpf": "1267820428",
+      "telefone": "558892382121",
+      "cidade": "Cianorte",
+      "cep": "87214-000",
+      "rua": "Cianorte",
+      "bairro": "Vidigal",
+      "numeroresidencia": "98",
+      "tipo": "empresa",
+      "cnpj": "213231231231",
+      "reservatorio": true,
+      "complemento": "",
+      "quantidade": "70",
+      "observacao": "",
+      "status": "pendente",
+      "criadoEm": "2026-11-12T00:28:15.607Z",
+      "id": "4ke9EQKiLxA"
+    }
+  ],
+  "avisos": [
+    {
+      "id": "1",
+      "titulo": "Coletas no final do mês",
+      "texto": "As coletas são realizadas todo final de mês, entre os dias 28, 29 e 30.",
+      "data": "2026-11-12"
+    },
+    {
+      "id": "2",
+      "titulo": "Prepare o óleo para a coleta",
+      "texto": "Coloque o líquido dentro de um reservatório para facilitar a coleta.",
+      "data": "2026-11-12"
+    },
+    {
+      "id": "3",
+      "titulo": "Quantidade mínima",
+      "texto": "O agendamento de coleta exige no mínimo 5 litros de óleo.",
+      "data": "2026-11-12"
+    },
+    {
+      "id": "4",
+      "titulo": "Cuidados com o recipiente",
+      "texto": "Recipiente danificado ou perdido pode ter o valor descontado do valor final ou gerar multa, conforme o termo de uso.",
+      "data": "2026-11-12"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,177 @@
+/*Botão de devolução do recipiente*/
+.acoes-topo{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.2rem;
+}
+
+.btn-devolucao{
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 0.9rem;
+    border: solid 1px var(--branco);
+    background: rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 0.8rem 1.2rem;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn-devolucao:hover{
+    box-shadow: var(--branco) 0px 0px 10px 5px;
+}
+
+/*Painel dos agendamentos*/
+.lado-direito{
+  width: min(1100px, 94%);
+  margin: 1.5rem auto 3rem;
+  overflow: hidden;
+  background: rgba(216, 168, 12, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid rgb(97, 94, 64) 1px;
+  border-radius: 10px;
+}
+
+.lado-direito h1{
+  width: 100%;
+  height: 3.5rem;
+  background: rgba(7, 7, 7, 0.486);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/*Início Lista de agendamentos*/
+.lista-agendamentos{
+  list-style: none;
+  width: 100%;
+  padding: 2rem;
+  background: rgba(7, 7, 7, 0.719);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 24rem), 1fr));
+  gap: 1.25rem;
+}
+
+.ag-card{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--branco);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.ag-topo{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.ag-topo h3{
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.ag-status{
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--amrelo-principal);
+  border-radius: 999px;
+  border: 1px solid var(--amrelo-principal);
+}
+
+.ag-card--confirmado .ag-status{
+  color: var(--verde);
+  border-color: var(--verde);
+}
+
+.ag-feito{
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ag-acoes{
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+
+.btn-rastrear,
+.btn-cancelar{
+  padding: 0.4rem 0.9rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  color: #ff6b6b;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 107, 107, 0.5);
+  background: transparent;
+  transition: 0.3s;
+}
+
+.btn-rastrear{
+  text-decoration: none;
+  color: var(--amrelo-principal);
+  border-color: var(--amrelo-principal);
+}
+
+.btn-rastrear:hover{
+  color: #14110a;
+  background: var(--amrelo-principal);
+}
+
+.btn-cancelar{
+  color: #ff6b6b;
+  border-color: rgba(255, 107, 107, 0.5);
+}
+
+.btn-cancelar:hover{
+  color: var(--branco);
+  background: #ff5a5a;
+}
+
+.ag-card--cancelado{
+  opacity: 0.7;
+}
+
+.ag-card--cancelado .ag-status{
+  color: #ff6b6b;
+  border-color: #ff6b6b;
+}
+
+.ag-vazio{
+  grid-column: 1 / -1;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--branco);
+}
+
+.ag-vazio a{
+  color: var(--amrelo-principal);
+}
+
+@media (max-width: 520px){
+  .lista-agendamentos{
+    padding: 1rem;
+  }
+}
+/*Fim Lista de agendamentos*/

@@ -1,0 +1,91 @@
+.reservatorio{
+    color: var(--branco);
+    margin: 3rem 6rem 0;
+}
+
+.reservatorio h2{
+    margin: 1.5rem 0 0.6rem;
+    font-size: 1.05rem;
+    color: var(--amrelo-principal);
+}
+
+.reservatorio-corpo{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.reservatorio-corpo img{
+    width: 18rem;
+    max-width: 100%;
+    border: solid var(--amrelo-principal) 1.5px;
+    border-radius: 10px;
+}
+
+.reservatorio-info{
+    flex: 1;
+    min-width: 16rem;
+    max-width: 38rem;
+}
+
+.reservatorio-info p,
+.passos li{
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.especificacoes{
+    list-style: none;
+    padding: 0.4rem 1.2rem;
+    border-radius: 12px;
+    background: rgba(7, 7, 7, 0.719);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.especificacoes li{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.55rem 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.especificacoes li:last-child{
+    border-bottom: none;
+}
+
+.especificacoes span{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.especificacoes strong{
+    text-align: right;
+}
+
+.passos{
+    max-width: 48rem;
+    padding-left: 1.2rem;
+}
+
+.passos li{
+    margin-bottom: 0.5rem;
+}
+
+.passos a{
+    color: var(--amrelo-principal);
+}
+
+@media (max-width: 900px){
+    .reservatorio{
+        margin: 3rem 3rem 0;
+    }
+}
+
+@media (max-width: 600px){
+    .reservatorio{
+        margin: 2.5rem 1.5rem 0;
+    }
+}

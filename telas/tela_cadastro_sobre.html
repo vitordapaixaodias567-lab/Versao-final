@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_cadastro.css">
+     <link rel="icon" type="image/png" href="../img/gota-logo.png">
+    <title>Cadastro Bio-Óleo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <!--Nav Bar-->
+    <nav class="nave-bar">
+    <div class="logo-titulo">
+        <img src="../img/3d_green_gradient_recycle_sign-Photoroom.png" alt="">
+        <h1>BIO-ÓLEO</h1>
+    </div>
+        
+        <div class="navegacao">
+            <a href="tela_abertura.html">INICIO</a>
+            <a href="tela_sobre.html">SOBRE</a>
+            <a href="tela_contato.html">CONTATO</a>
+            <a href="tela_cadastro_sobre.html"><span>CADASTRO</span></a>
+        </div>
+    </nav>
+    <!--Fim da Nav Bar-->
+
+    <!--Card Login-->
+    <div class="card-login">
+        <div>
+            <img src="../img/gota-logo.png" alt="">
+            <h1>Bem Vindo!</h1>
+            <p>Insira as Credenciais</p>
+            <form action="" data-destino="tela_sobre_inicial.html">
+                <input id="email" type="email" placeholder="Digite Seu email" pattern="[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}" required>
+                <input id="nome" type="text" placeholder="Digite Seu Nome" pattern=".*\S.*" title="Digite seu nome" required>
+                <input id="idade" type="number" placeholder="Digite Sua idade" min="1" max="120" required>
+                <input id="senha"  type="password" placeholder="Digite sua senha" required minlength="8"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <div id="loading" style="display:none;">Carregando...</div>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p>Possui cadastro? <a href="tela_login.html">Entrar</a></p>
+        </div>
+    </div>
+  <!--Fim do Card Login-->
+
+  <script src="../scripts/mensagem.js"></script>
+  <script src="../scripts/script.js"></script>
+
+
+
+</body>
+</html>

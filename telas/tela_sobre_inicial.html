@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_abertura.css">
+    <link rel="stylesheet" href="style_reservatorio.css">
+    <link rel="icon" type="image/png" href="../img/gota-logo.png">
+
+    <link rel="stylesheet" href="style_gaveteiro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Sobre - Bio-Óleo</title>
+</head>
+<body>
+<!--Começo da nave bar-->
+ <nav class="nave-bar">
+    <div class="logo-titulo">
+        <button class="burger" id="openBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer"></button>
+        <img src="../img/3d_green_gradient_recycle_sign-Photoroom.png" alt="">
+        <h1>BIO-ÓLEO</h1>
+    </div>
+
+        <div class="navegacao">
+            <a href="tela_inicial.html">INICIO</a>
+            <a href="tela_sobre_inicial.html"><span>SOBRE</span></a>
+            <a href="tela_contato_inicial.html">CONTATO</a>
+            <a href="tela_perfil.html"><h2 id="boas-vindas" style="font-size: 0.7rem;">PERFIL</h2></a>
+        </div>
+    </nav>
+     <!--Fim da nave bar-->
+
+     <div class="texto-centro">
+        <div class="texto-coleta">
+            <h1>SOBRE A BIO-ÓLEO</h1>
+            <p>Transformamos óleo de cozinha usado em novos recursos. <br>
+                Já foram coletados mais de 2.000 litros.</p>
+            <p>As coletas são realizadas todo final de mês, nos dias 28, 29 e 30. <br>
+                Coloque o líquido dentro de um reservatório para facilitar a coleta. <br>
+                Quantidade mínima: 5 litros.</p>
+            <p>Cadastre-se e agende a sua coleta.</p>
+        </div>
+     </div>
+
+     <div class="formas-coletas">
+        <h1>Formas de coleta</h1>
+        <p>Coleta por caminhão: nossa equipe passa na sua residência ou no seu comércio no final de cada mês, nos dias 28, 29 e 30, e recolhe o óleo que você armazenou.</p>
+        <p>Reservatório no local: empresas podem solicitar um reservatório da Bio-Óleo para deixar o óleo armazenado até a coleta mensal.</p>
+     </div>
+
+     <section class="reservatorio">
+        <h1>O reservatório Bio-Óleo</h1>
+        <div class="reservatorio-corpo">
+            <img src="../img/images.jpg" alt="Reservatório azul da Bio-Óleo com etiqueta de identificação">
+
+            <div class="reservatorio-info">
+                <p>É um tambor azul de plástico, feito para guardar o óleo de cozinha usado com segurança até a coleta. Ele fica fechado, não vaza e mantém o óleo longe da luz, do mau cheiro e de contaminações. É só despejar o óleo usado, fechar bem e esperar a nossa equipe.</p>
+
+                <h2>Especificações</h2>
+                <ul class="especificacoes">
+                    <li><span>Capacidade</span><strong>200 litros</strong></li>
+                    <li><span>Material</span><strong>Polietileno de alta densidade (PEAD)</strong></li>
+                    <li><span>Cor</span><strong>Azul</strong></li>
+                    <li><span>Altura</span><strong>aprox. 90 cm</strong></li>
+                    <li><span>Diâmetro</span><strong>aprox. 58 cm</strong></li>
+                    <li><span>Tampa</span><strong>Removível, com cinta de travamento</strong></li>
+                    <li><span>Identificação</span><strong>Etiqueta Bio-Óleo com QR code</strong></li>
+                    <li><span>Uso</span><strong>Somente óleo de cozinha usado</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Como funciona</h2>
+        <ol class="passos">
+            <li><strong>Solicite:</strong> em Agendamento, escolha Empresa, informe o CNPJ e marque a opção de solicitar um reservatório.</li>
+            <li><strong>Cuide dele:</strong> ao assinar o termo, o recipiente fica sob a sua responsabilidade. Mantenha-o fechado e em local seguro.</li>
+            <li><strong>Armazene:</strong> coloque apenas óleo de cozinha usado, sem misturar água, combustíveis ou outros líquidos.</li>
+            <li><strong>Aguarde a coleta:</strong> ela acontece no final de cada mês, nos dias 28, 29 e 30, com quantidade mínima de 5 litros.</li>
+            <li><strong>Devolva:</strong> quando não precisar mais, <a href="tela_devolucao.html">solicite a devolução</a>. Recipiente danificado ou perdido pode ter o valor descontado ou gerar multa.</li>
+        </ol>
+     </section>
+
+    <footer class="rodape">
+        <div>
+            <h1>📞 Nosso Telefone</h1>
+            <p>(44) 99977-7632</p>
+        </div>
+
+        <div>
+            <h1>📍 Estamos localizados</h1>
+            <p>Rodovia PR-323, Lote 4, Gleba São Januário, Cianorte - PR</p>
+        </div>
+    </footer>
+
+<script>
+    const id = localStorage.getItem('usuarioId');
+    if (id) {
+        fetch(`http://localhost:3001/pessoas/${id}`)
+            .then(r => r.json())
+            .then(pessoa => {
+                document.getElementById('boas-vindas').textContent = `Olá, ${pessoa.nome.trim().split(' ')[0]}!`;
+            })
+            .catch(console.error);
+    }
+</script>
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="drawer" id="drawer" aria-label="Menu principal">
+        <header class="drawer-topo">
+            <div class="drawer-marca">
+                <img src="../img/3d_green_gradient_recycle_sign-Photoroom.png" alt="">
+                <span>BIO-ÓLEO</span>
+            </div>
+            <button class="close" id="closeBtn" aria-label="Fechar menu">&times;</button>
+        </header>
+        <nav>
+            <a href="tela_avisos.html">Avisos</a>
+            <a href="tela_inicial.html">Agendar</a>
+            <a href="tela_solicitacoes.html">Minhas Solicitações</a>
+            <a href="tela_contato_inicial.html">Contato</a>
+            <a href="tela_perfil.html">Meu perfil</a>
+            <a href="tela_login.html" class="sair" id="sair">Sair</a>
+        </nav>
+    </aside>
+
+    <script src="../scripts/script_gaveteiro.js"></script>
+    <script src="../scripts/mensagem.js"></script>
+</body>
+</html>

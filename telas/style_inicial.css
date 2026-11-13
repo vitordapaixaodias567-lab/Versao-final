@@ -1,0 +1,596 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --branco: #fff;
+    --amrelo-principal: #F2B705;
+    --verde: #2FA84F;
+    --ambar: #B8700A;
+}
+
+body{
+    background-image: url("../img/bioleo-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*Começo Nave Bar*/
+.nave-bar{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.nave-bar span{
+    position: relative;
+    display: inline-block;
+}
+
+
+.nave-bar span::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+    width: 9%;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--amrelo-principal);
+    border-radius: 2px;
+}
+
+.logo-titulo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--branco);
+}
+
+.logo-titulo h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.logo-titulo img{
+    width: 2rem;
+    margin-left: 0;
+}
+
+.navegacao{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navegacao a{
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 0.9rem;
+}
+
+.navegacao h2{
+    font-size: 0.7rem;
+}
+
+.navegacao a:last-child{
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: solid #fff 1px;
+    border-radius: 20px;
+    padding: 0.5rem 0.9rem;
+    font-weight: 100;
+    transition: 0.3s;
+}
+
+.navegacao a:last-child:hover{
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    box-shadow: #fafafa 0px 0px 15px;
+}
+
+
+:root{
+    --amarelo-1: #ffd60a;
+    --amarelo-2: #ffe766;
+    --card-bg: rgba(0, 0, 0, 0.55);
+    --card-borda: rgba(255, 255, 255, 0.18);
+    --campo-borda: rgba(255, 255, 255, 0.28);
+}
+
+/*Começo card de agendamento*/
+.card-agendamento h1{
+    color: red;
+}
+
+.card-agendamento p{
+    font-size: 0.95rem;
+}
+
+.card-agendamento{
+    background-color: var(--card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--card-borda);
+    border-radius: 18px;
+    color: #fff;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 640px;
+    margin: 2rem auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+
+.input-label label,
+.card-agendamento label{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.input-ordem{
+    display: flex;
+    gap: 1.2rem;
+}
+
+
+.input-label input,
+.card-agendamento input,
+.card-agendamento select,
+.card-agendamento textarea{
+    width: 100%;
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid var(--campo-borda);
+    border-radius: 10px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.7rem 0.9rem;
+    outline: none;
+    transition: 0.25s;
+}
+
+.card-agendamento textarea{
+    min-height: 5rem;
+    resize: none;
+}
+
+.card-agendamento input::placeholder,
+.card-agendamento textarea::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.card-agendamento input:focus,
+.card-agendamento select:focus,
+.card-agendamento textarea:focus{
+    border-color: var(--amarelo-1);
+    box-shadow: 0 0 0 3px rgba(255, 214, 10, 0.15);
+}
+
+
+.complementos{
+    max-width: 100%;
+    margin-top: 1rem;
+}
+
+.complementos input{
+    height: 5rem;
+    border-radius: 10px;
+    border: 1px solid var(--campo-borda);
+    background-color: rgba(0, 0, 0, 0.35);
+    color: #fff;
+}
+
+.observacao{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.observacao input{
+   height: 5rem;
+}
+
+.bairro-complementos{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+}
+
+.bairro-complementos label{
+    text-align: left;
+}
+
+.opcoes{
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.opcao{
+    flex: 1;
+    background: transparent;
+    border: 1px solid var(--campo-borda);
+    border-radius: 999px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.opcao:hover{
+    border-color: var(--amarelo-1);
+}
+
+.opcao.ativo,
+.opcao.selecionado{
+    background: linear-gradient(90deg, var(--amarelo-1), var(--amarelo-2));
+    border-color: transparent;
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+
+.calendario{
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid var(--campo-borda);
+    border-radius: 14px;
+    padding: 1rem;
+}
+
+.calendario-grade{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.4rem;
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+.calendario-grade .dia{
+    padding: 0.4rem 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.calendario-grade .dia:hover{
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.calendario-grade .dia.desabilitado{
+    color: rgba(255, 255, 255, 0.3);
+    cursor: default;
+}
+
+.calendario-grade .dia.ativo{
+    background: var(--amarelo-1);
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+
+.btn-confirmar{
+    width: 100%;
+    background: linear-gradient(90deg, var(--amarelo-1), var(--amarelo-2));
+    border: none;
+    border-radius: 999px;
+    color: #1a1a1a;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.9rem;
+    cursor: pointer;
+    transition: 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-confirmar:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(255, 214, 10, 0.35);
+}
+
+
+.card-resumo{
+    background: rgba(30, 18, 0, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--card-borda);
+    border-radius: 14px;
+    padding: 1.2rem 1.4rem;
+    font-size: 0.75rem;
+    min-width: 260px;
+}
+
+.card-resumo h2{
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.card-resumo .linha{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.55rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.card-resumo .linha strong{
+    color: #fff;
+    font-weight: 700;
+}
+
+.card-resumo .aviso{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.card-resumo .aviso::before{
+    content: "";
+    flex: none;
+    width: 6px;
+    height: 6px;
+    margin-top: 0.3rem;
+    border-radius: 50%;
+    background: var(--amarelo-1);
+}
+
+
+
+.titulo-central{
+    text-align: center;
+    padding: 1rem 1rem 0;
+}
+
+.titulo-central img{
+    margin-top: 1rem;
+   width: 5rem;
+}
+
+.card-agendamento{
+    width: min(680px, 92%);
+    max-width: none;
+    margin: 2rem auto 3rem;
+    align-items: stretch;
+}
+
+.form-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.2rem;
+    width: 100%;
+}
+
+.form-grid .campo{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin: 0;
+    max-width: none;
+}
+
+.form-grid .campo.total{
+    grid-column: 1 / -1;
+}
+
+.form-grid .campo label{
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.form-grid .campo input,
+.form-grid .campo textarea{
+    width: 100%;
+    max-width: 100%;
+    height: 2.8rem;
+    margin: 0;
+}
+
+.form-grid .campo textarea{
+    height: 2.8rem;
+    min-height: 2.8rem;
+}
+
+.form-grid .btn-confirmar{
+    grid-column: 1 / -1;
+    margin-top: 0.6rem;
+}
+
+.termos-uso{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+.termos-uso a{
+    color: #ffd60a;
+    margin-left: 0.2rem;
+}
+/*FIm card de agendamentos*/
+
+@media (max-width: 600px){
+    .form-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.card-agendamento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-grid{
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.form-grid .campo textarea.grande{
+    height: 7rem;
+    min-height: 7rem;
+    padding: 0.8rem 0.9rem;
+    line-height: 1.4;
+    resize: vertical;
+}
+
+.form-grid .campo:has(#observacao) textarea{
+    height: 9rem;
+    min-height: 9rem;
+}
+
+form button{
+      display: block;
+    margin: 1rem auto 0;
+    padding: 0.8rem 7rem;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #ffd60a 0%, #ffe66d 100%);
+    border: none;
+    transition: 0.5s;
+}
+
+form button:hover{
+   box-shadow: var(--amrelo-principal) 0px 0px 10px 5px;
+   cursor: pointer;
+}
+
+/*Correções: select, data, colunas iguais e mobile*/
+.card-agendamento select option{
+    color: #000;
+}
+
+.card-agendamento input[type="date"]{
+    color-scheme: dark;
+}
+
+.input-ordem .input-label{
+    flex: 1;
+    min-width: 0;
+}
+
+@media (max-width: 600px){
+    .nave-bar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.2rem 1rem;
+    }
+
+    .logo-titulo img{
+        margin-left: 0;
+    }
+
+    .navegacao{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.9rem 1.4rem;
+    }
+
+    .navegacao a:last-child{
+        position: static;
+        transform: none;
+    }
+
+    .input-ordem{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .card-agendamento{
+        padding: 1.2rem;
+    }
+
+    form button{
+        width: 100%;
+        padding: 0.8rem 1rem;
+    }
+}
+
+
+/*Botões Residencial / Comercial e cards de cada tipo*/
+.opcoes{
+    width: 100%;
+}
+
+.card-tipo{
+    width: 100%;
+    background: rgba(30, 18, 0, 0.6);
+    border: 1px solid var(--card-borda);
+    border-radius: 14px;
+    padding: 1.2rem 1.4rem;
+    margin-bottom: 0.6rem;
+}
+
+.card-tipo h2{
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
+    color: var(--amarelo-1);
+}
+
+.card-agendamento label.opcao-check{
+    flex-direction: row;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 0.9rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.card-agendamento input[type="checkbox"]{
+    width: 1.2rem;
+    height: 1.2rem;
+    padding: 0;
+    accent-color: var(--amarelo-1);
+    cursor: pointer;
+}
+
+
+/*Opção "Sou uma empresa" (embaixo do botão de confirmar)*/
+.opcao-empresa{
+    margin-top: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.card-agendamento .opcao-empresa > label.opcao-check{
+    margin-top: 0;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.opcao-empresa .card-tipo{
+    margin-bottom: 0;
+}

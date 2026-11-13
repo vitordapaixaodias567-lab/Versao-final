@@ -1,0 +1,156 @@
+/*Página de contato: usa a nav e o fundo do style_abertura.css*/
+.contato{
+    color: var(--branco);
+    max-width: 66rem;
+    margin: 4rem 2rem 3rem 6rem;
+}
+
+.contato-topo h1{
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+
+.contato-topo p{
+    margin-top: 0.6rem;
+    max-width: 38rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.contato-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+}
+
+.contato-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(0, 0, 0, 0.66);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.contato-icone{
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 12px;
+    color: #14110a;
+    background: var(--amrelo-principal);
+}
+
+.contato-icone svg{
+    width: 1.35rem;
+    height: 1.35rem;
+}
+
+.contato-card h2{
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.contato-destaque{
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.contato-destaque--texto{
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.contato-apoio{
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.contato-botao{
+    margin-top: auto;
+    align-self: flex-start;
+    padding: 0.65rem 1.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--branco);
+    border-radius: 20px;
+    border: 1px solid var(--branco);
+    background: rgba(0, 0, 0, 0.12);
+    transition: 0.3s;
+}
+
+/*margin-top:auto no botão + 1rem de folga mínima mantém os três botões alinhados no fim do card*/
+.contato-apoio{
+    margin-bottom: 1rem;
+}
+
+.contato-botao:hover{
+    color: #14110a;
+    background: var(--branco);
+    box-shadow: #fafafa 0px 0px 12px 2px;
+}
+
+.contato-botao--principal{
+    color: #14110a;
+    border: 2px solid #222222;
+    background: linear-gradient(90deg, #ffd60a 0%, #ffe66d 100%);
+}
+
+.contato-botao--principal:hover{
+    background: linear-gradient(90deg, #ffd60a 0%, #ffe66d 100%);
+    box-shadow: #F2B705 0px 0px 12px 2px;
+}
+
+.contato-botao:focus-visible{
+    outline: 2px solid var(--branco);
+    outline-offset: 2px;
+}
+
+@media (max-width: 900px){
+    .contato{
+        margin: 3rem 3rem 2.5rem;
+    }
+}
+
+@media (max-width: 600px){
+    .contato{
+        margin: 2.5rem 1.5rem 2rem;
+    }
+
+    .contato-topo{
+        text-align: center;
+    }
+
+    .contato-topo h1{
+        font-size: 1.5rem;
+    }
+
+    .contato-topo p{
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 0.95rem;
+    }
+
+    .contato-cards{
+        margin-top: 2rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .contato-botao{
+        transition: none;
+    }
+}

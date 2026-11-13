@@ -1,0 +1,186 @@
+:root{
+    --amarelo-1: #ffd60a;
+    --amarelo-2: #ffe766;
+    --card-borda: rgba(255, 255, 255, 0.18);
+    --campo-borda: rgba(255, 255, 255, 0.28);
+}
+
+/*Gaveteiro (menu lateral)*/
+.nave-bar .logo-titulo{
+    padding-left: 1.5rem;
+}
+
+.nave-bar .logo-titulo img{
+    margin-left: 0;
+}
+
+/* Botão hambúrguer: as 3 linhas são desenhadas com um pseudo-elemento
+   (assim não conflita com o .nave-bar span da barra) */
+.burger{
+    width: 42px;
+    height: 42px;
+    flex: none;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    transition: 0.25s;
+}
+
+.burger::before{
+    content: "";
+    width: 22px;
+    height: 2px;
+    border-radius: 2px;
+    background: #fff;
+    box-shadow: 0 7px 0 #fff, 0 14px 0 #fff;
+    transform: translateY(-7px);
+}
+
+.burger:hover{
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
+}
+
+.burger:focus-visible,
+.drawer :focus-visible{
+    outline: 2px solid var(--amarelo-1);
+    outline-offset: 2px;
+}
+
+/* Fundo escurecido */
+.overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s, visibility 0.25s;
+    z-index: 20;
+}
+
+/* Gaveta */
+.drawer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: min(300px, 82vw);
+    display: flex;
+    flex-direction: column;
+    background: rgba(20, 14, 0, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-right: 1px solid var(--card-borda);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+    color: #fff;
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: transform 0.28s ease, visibility 0s 0.28s;
+    z-index: 30;
+}
+
+body.open{
+    overflow: hidden;
+}
+
+body.open .overlay{
+    opacity: 1;
+    visibility: visible;
+}
+
+body.open .drawer{
+    transform: none;
+    visibility: visible;
+    transition: transform 0.28s ease;
+}
+
+.drawer-topo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 1rem 1.2rem 1.4rem;
+    border-bottom: 1px solid var(--card-borda);
+}
+
+.drawer-marca{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.drawer-marca img{
+    width: 1.8rem;
+}
+
+.close{
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    color: #fff;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.close:hover{
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.drawer nav{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 1rem;
+}
+
+.drawer nav a{
+    display: block;
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: 0.25s;
+}
+
+.drawer nav a:hover{
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* página atual */
+.drawer nav a[aria-current="page"]{
+    background: linear-gradient(90deg, var(--amarelo-1), var(--amarelo-2));
+    color: #14110a;
+    font-weight: 600;
+}
+
+.drawer nav a.sair{
+    margin-top: auto;
+    border: 1px solid var(--campo-borda);
+    text-align: center;
+}
+
+@media (max-width: 600px){
+    .nave-bar .logo-titulo{
+        padding-left: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .drawer,
+    .overlay{
+        transition: none;
+    }
+}

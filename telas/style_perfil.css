@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --branco: #fff;
+    --amrelo-principal: #F2B705;
+    --verde: #2FA84F;
+    --ambar: #B8700A;
+}
+
+body{
+    background-image: url("../img/bioleo-background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Começo Nave Bar*/
+.nave-bar{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 1.5rem 0;
+     background: rgba(0, 0, 0, 0.753);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    position: relative;
+}
+
+.nave-bar span{
+    position: relative;
+    display: inline-block;
+}
+
+
+.nave-bar span::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+    width: 9%;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--amrelo-principal);
+    border-radius: 2px;
+}
+
+.logo-titulo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--branco);
+}
+
+.logo-titulo h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.logo-titulo img{
+    width: 2rem;
+    margin-left: 4rem;
+}
+
+.navegacao{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navegacao a{
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 0.9rem;
+}
+
+.navegacao h2{
+    font-size: 0.7rem;
+}
+
+.navegacao a:last-child{
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: solid #fff 1px;
+    border-radius: 20px;
+    padding: 0.5rem 0.9rem;
+    font-weight: 100;
+    transition: 0.3s;
+}
+
+.navegacao a:last-child:hover{
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    box-shadow: #fafafa 0px 0px 15px;
+}
+/*Fim da Nav Bar*/
+
+
+
+.area-foto{
+    background: rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 6rem 6rem 6rem;
+    border: solid 1px #a19f9f;
+    border-radius: 10px;
+}
+
+.area-foto img{
+    width: 8rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.area-foto h1{
+    color: #fff;
+}
+
+.area-foto a{
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #fff;
+    border: solid 1px #fff;
+    background: rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 0.8rem;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.area-foto a:hover{
+    padding: 1rem;
+    box-shadow: var(--branco) 0px 0px 10px 5px;
+    backdrop-filter: blur(14px);    
+}
+
+.idade{
+    color: #fff;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.nome-foto{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nome-foto p{
+   color: #fff;
+}
+
+.cpf-cidade{
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}

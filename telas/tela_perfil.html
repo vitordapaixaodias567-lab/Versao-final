@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_perfil.css">
+    <link rel="stylesheet" href="style_inicial.css">
+    <link rel="stylesheet" href="style_gaveteiro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Bio-Óleo Perfil</title>
+</head>
+<body>
+    <!--Inicio Nav Bar-->
+   <nav class="nave-bar">
+    <div class="logo-titulo">
+        <button class="burger" id="openBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer"></button>
+        <img src="../img/3d_green_gradient_recycle_sign-Photoroom.png" alt="">
+        <h1>BIO-ÓLEO</h1>
+    </div>
+        
+        <div class="navegacao">
+            <a href="tela_inicial.html">INICIO</a>
+            <a href="tela_sobre_inicial.html">SOBRE</a>
+            <a href="tela_contato_inicial.html">CONTATO</a>
+            <a href="tela_perfil.html"><span>PERFIL</span></a>
+            <a href="tela_perfil.html"><h2 id="boas-vindas"></h2></a>
+        </div>
+    </nav>
+<!--Fim Nav Bar-->
+
+<!--Inicio Card Foto-->
+    <header class="area-foto">
+        <div class="nome-foto">
+            <img src="../img/sem_perfil.jpg" alt="">
+            <h1 class="nome" id="nome"></h1>
+            <div class="idade">
+            <p id="idade"></p>
+            <p id="telefone"></p>
+            </div>
+            <div class="cpf-cidade">
+            <p id="cidade"></p>
+            <p id="cpf"></p>
+            </div>
+        </div>
+        <a href="tela_alterar.html">Alterar Dados</a>
+    </header>
+
+<!--Fim área foto-->
+
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="drawer" id="drawer" aria-label="Menu principal">
+        <header class="drawer-topo">
+            <div class="drawer-marca">
+                <img src="../img/3d_green_gradient_recycle_sign-Photoroom.png" alt="">
+                <span>BIO-ÓLEO</span>
+            </div>
+            <button class="close" id="closeBtn" aria-label="Fechar menu">&times;</button>
+        </header>
+        <nav>
+            <a href="tela_avisos.html">Avisos</a>
+            <a href="tela_inicial.html">Agendar</a>
+            <a href="tela_solicitacoes.html">Minhas Solicitações</a>
+            <a href="tela_contato_inicial.html">Contato</a>
+            <a href="tela_perfil.html">Meu perfil</a>
+            <a href="tela_login.html" class="sair" id="sair">Sair</a>
+        </nav>
+    </aside>
+
+    <script src="../scripts/script_gaveteiro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="../scripts/mensagem.js"></script>
+<script src="../scripts/script_perfil.js"></script>
+</body>
+</html>
